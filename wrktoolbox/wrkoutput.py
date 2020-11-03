@@ -43,7 +43,7 @@ req_sec_pattern = Literal('Req/Sec').suppress() \
 reqs_count_pattern = Word(nums).setResultsName('reqs_count') \
                      + Literal('requests').suppress() \
                      + Literal('in').suppress() \
-  + Word(decimal_chars).setResultsName('seconds_count') + Literal('s,', 'm,').suppress() \
+  + Word(decimal_chars).setResultsName('seconds_count') + oneOf('s,', 'm,').suppress() \
   + Word(decimal_chars).setResultsName('total_transfer_read') \
   + Word(bytes_size_chars).setResultsName('total_transfer_read_unit') \
   + Literal('read').suppress()
