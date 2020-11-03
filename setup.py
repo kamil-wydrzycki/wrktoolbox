@@ -7,7 +7,7 @@ def readme():
         return f.read()
 
 
-setup(name='wrktools',
+setup(name='wrkloadgeneratortoolbox',
       version=version,
       description='A tool to run wrk and wrk2 benchmarks and store their output.',
       long_description=readme(),
@@ -18,9 +18,9 @@ setup(name='wrktools',
           'Programming Language :: Python :: 3',
           'Operating System :: Unix'
       ],
-      url='https://github.com/RobertoPrevato/wrktoolbox',
-      author='RobertoPrevato',
-      author_email='roberto.prevato@gmail.com',
+      url='https://github.com/kamil-wydrzycki/wrktoolbox',
+      author='KamilWydrzycki',
+      author_email='kamwyd@gmail.com',
       keywords='wrk runner benchmarks load performance tests',
       license='MIT',
       packages=['wrktoolbox',
