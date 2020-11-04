@@ -188,6 +188,8 @@ class TimeResult(ValueResult):
             return self.value / 1000
         if self.unit == 's':
             return self.value * 1000
+        if self.unit == 'm':
+            return self.value * 60 * 1000
 
 
 class SocketErrorsResult(Result):
