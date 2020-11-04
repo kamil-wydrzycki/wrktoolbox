@@ -1,5 +1,5 @@
 from uuid import uuid4
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Optional, Union
 from pyparsing import Literal, Word, nums, alphanums, OneOrMore, Group, Suppress, oneOf
 
@@ -189,7 +189,7 @@ class TimeResult(ValueResult):
         if self.unit == 's':
             return self.value * 1000
         if self.unit == 'm':
-            return self.value * 60 * 1000
+            return timedelta(minutes=self.value).seconds * 1000
 
 
 class SocketErrorsResult(Result):
